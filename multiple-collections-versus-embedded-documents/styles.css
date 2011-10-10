@@ -1,9 +1,10 @@
+body{font-family:Chivo,verdana;background:#222;color:#fff;}
 h2{color:#ddd;font-weight:normal;margin-bottom:10px;}
 p{margin-bottom:35px;}
 pre{line-height:26px;margin-bottom:50px;}
 pre .comment{color:#5a5;}
 
-#page{font-family:Chivo,verdana;width:960px;margin:100px auto;font-size:16px;}
+#page{width:960px;margin:100px auto;font-size:16px;}
 #main{font-size:32px;text-align:center;line-height:50px;margin-bottom:50px;}
 body.first #main, body.last #main{padding:50px 0;border:solid #444;border-width:6px 0;}
 body.first #main:first-letter, body.last #main:first-letter{font-size:75px;}
