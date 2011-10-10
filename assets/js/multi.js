@@ -3,12 +3,12 @@ $(document).ready(function() {
   var $pages = $('#multi > div');
   var $container = $('#page');
   var $pager = $('<div id="pager">').appendTo($body);
-  $('<a>').attr({id: 'next', href: '#'}).click(nextPage).append('<span>').appendTo($body);
-  $('<a>').attr({id: 'prev', href: '#'}).click(previousPage).append('<span>').appendTo($body);
+  var $next = $('<a>').attr({id: 'next', href: '#'}).click(nextPage).append('<span>').appendTo($body);
+  var $prev = $('<a>').attr({id: 'prev', href: '#'}).click(previousPage).append('<span>').appendTo($body);
   multi = {current: null, count: $pages.length};
   
   $.address.strict(false);
-  $.address.init(function(e) {
+  $.address.externalChange(function(e) {
       var page = parseInt(e.value);
       if (isNaN(page)) { page = 1; }
       loadPage(page);
@@ -39,8 +39,10 @@ $(document).ready(function() {
     if (index > multi.count || index < 1) { return; }
     
     $body.removeClass('first last')
-    if (index == 1) { $body.addClass('first'); }
-    if (index == multi.count) { $body.addClass('last'); }
+    $prev.show();
+    $next.show();
+    if (index == 1) { $body.addClass('first'); $prev.hide(); }
+    if (index == multi.count) { $body.addClass('last'); $next.hide(); }
     
     $container.empty().append($pages.eq(index-1));
     var text = index + ' of ' + multi.count;
