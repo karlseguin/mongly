@@ -1,0 +1,20 @@
+*{padding:0;margin:0;border:none;}
+body{font-family:verdana;background:#222;color:#fff;}
+a{text-decoration:none;color:#c35617;}
+
+#page a:hover{text-decoration:underline;}
+#multi{display:none;}
+#leaf{position:fixed;bottom:0;width:23px;height:50px;right:50px;cursor:pointer}
+#footer{height:35px;width:100%;position:absolute;bottom:0;display:none;text-align:right;}
+#footer a{color:#fff;padding:2px 0;margin-right:40px;text-decoration:none;border:2px solid transparent;}
+#footer a:hover{border-bottom-color:#fff}
+
+#next, #prev{position:absolute;top:0;right:0;height:100%;width:50px;color:#222;font-size:32px;}
+#prev{left:0;}
+#next:hover, #prev:hover {color:#111;background:#333;text-shadow:0 0 20px #fff;}
+#next:hover{border-left:1px solid #444;}
+#prev:hover{border-right:1px solid #444;}
+#next span, #prev span{position:absolute;top:50%;width:100%;text-align:center;}
+#next span:after{content:'\276f'}
+#prev span:after{content:'\276e'}
+#pager{position:fixed;bottom:25px;left:25px;color:#888;font-size:80%;}

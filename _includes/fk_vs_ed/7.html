@@ -1,0 +1,10 @@
+<div id="main">Separate collections require more work</div>
+
+<pre>
+  // finding a post + its comments is two queries and require extra work
+  // in your code to make it all pretty (or your ODM might do it for you)
+  > db.posts.find({_id: 9001});
+  > db.comments.find({post_id: 9001})
+</pre>
+
+<div class="note">this also takes [a bit] more space (+1 field, +1 index)</div>

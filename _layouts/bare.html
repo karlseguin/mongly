@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+    {% for font in page.fonts %}
+      <link href="http://fonts.googleapis.com/css?family={{ font }}" rel="stylesheet" type="text/css">
+    {% endfor %}
+    {% if page.css %}<link href="styles.css" rel="stylesheet" type="text/css">{% endif %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
+    <script src="/assets/js/main.js" type="text/javascript"></script>
+    {% if page.multi %}<script src="/assets/js/multi.js" type="text/javascript"></script>{% endif %}
+  </head>
+  <body>
+    <div id="page">{{ content }}</div>
+    <img src="/assets/i/leaf.png" id="leaf" />
+    <div id="footer">
+      <a href="https://github.com/karlseguin/mongohelp">fork it</a>
+      <a href="http://openmymind.net">openmymind.net</a>
+    </div>
+  </body>
+</html>
+

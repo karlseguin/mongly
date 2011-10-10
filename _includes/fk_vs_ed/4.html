@@ -1,0 +1,14 @@
+<div id="main">Separate collections offer the greatest querying flexibility</div>
+
+<pre>
+  // sort comments however you want
+  > db.comments.find({post_id: 3}).sort({votes: -1}).limit(5)
+  
+  // pull out one or more specific comment(s)
+  > db.comments.find({post_id: 3, user: 'leto'})
+  
+  // get a all of a user's comments joining the posts to get the title
+  > var comments = db.comments.find({user: 'leto'}, {post_id: true, votes: true})
+  > var postIds = comments.map(function(c) { return c.post_id; });
+  > db.posts.find({_id: {$in: postIds}}, {title: true});
+</pre>

@@ -1,0 +1,14 @@
+<div id="main">No big differences for inserts and updates</div>
+
+<pre>
+  // separate collection insert and update
+  > db.comments.insert({post_id: 43, title: 'i hate unicrons', user: 'dracula'});
+  > db.comments.update({_id: 4949}, {$set : {tiltle: 'i hate unicorns'}});
+  
+  // embedded document insert and update
+  > db.posts.update({_id: 43}, {$push: {title: 'lol @ emo vampire', user: 'paul'}})
+  // this specific update requires that we store an _id with each comment
+  > db.posts.update( {'comments._id': 4949}, {$inc:{'comments.$.votes':1}})
+</pre>
+
+<div class="note">documents that grow, like inserting new comments, will have a <a href="/whats-a-padding-factor">padding factor</a></div>
