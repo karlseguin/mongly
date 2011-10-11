@@ -16,7 +16,7 @@ pre .comment{color:#282;}
 #footer a{color:#222;padding:2px 0;margin-right:40px;}
 #footer a:hover{text-decoration:underline;}
 
-#next, #prev{position:absolute;top:0;right:0;height:100%;width:50px;color:#222;font-size:32px;}
+#next, #prev{position:absolute;top:0;right:0;height:100%;width:50px;color:#222;font-size:50px;}
 #prev{left:0;}
 #next:hover, #prev:hover {color:#111;background:#333;text-shadow:0 0 20px #fff;}
 #next:hover{border-left:1px solid #444;}
