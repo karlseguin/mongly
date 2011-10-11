@@ -1,4 +1,5 @@
 body{font-family:Ubuntu;}
+h1{position:absolute;left:3px;top:100px;width:40px;text-align:center;}
 .points{padding:10px 0;width:1080px;;margin:0 auto;overflow:auto;border-bottom:1px solid #ddd;}
 .points:last-child{border:none;}
 .points > div{float:left;width:28%;font-size:18px;line-height:50px;padding:15px;border-right:1px solid #ddd;position:relative;}
