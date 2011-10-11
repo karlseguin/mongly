@@ -12,7 +12,7 @@ fonts: [Ubuntu]
   <div>MongoDB can add extra padding to new documents which can allow in-place updates even when the size changes.<span class="count">3</span></div>
 </div>
 <div class="points">
-  <div>$inc an integer doesn't increase a document's size, since the underlying field remains the same type.<span class="count">4</span></div>
+  <div>$inc an int doesn't usually increase a document's size since the field type usually remains the same type.<span class="count">4</span></div>
   <div>Using $push to add a new embedded document is good example of a document changing size.<span class="count">5</span></div>
   <div>Analysis of past updates is used to determine what % of a document's size should be added as padding.<span class="count">6</span></div>
 </div>
