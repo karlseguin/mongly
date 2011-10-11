@@ -6,7 +6,7 @@
     {% for font in page.fonts %}
       <link href="http://fonts.googleapis.com/css?family={{ font }}" rel="stylesheet" type="text/css">
     {% endfor %}
-    {% if page.css %}<link href="styles.css" rel="stylesheet" type="text/css">{% endif %}
+    {% if page.css %}<link href="/assets/css/{{page.css}}.css" rel="stylesheet" type="text/css">{% endif %}
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
     <script src="/assets/js/main.js" type="text/javascript"></script>
     {% if page.multi %}<script src="/assets/js/multi.js" type="text/javascript"></script>{% endif %}
