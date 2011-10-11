@@ -22,8 +22,8 @@ pre .comment{color:#282;}
 #next:hover{border-left:1px solid #444;}
 #prev:hover{border-right:1px solid #444;}
 #next span, #prev span{position:absolute;top:50%;width:100%;text-align:center;}
-#next span:after{content:'\276f'}
-#prev span:after{content:'\276e'}
+#next span:after{content:'\203a'}
+#prev span:after{content:'\2039'}
 #pager{position:fixed;bottom:25px;left:25px;color:#888;font-size:80%;}
 
 
