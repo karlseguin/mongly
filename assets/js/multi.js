@@ -10,8 +10,9 @@ $(document).ready(function() {
   $.address.strict(false);
   $.address.externalChange(function(e) {
       var page = parseInt(e.value);
-      if (isNaN(page)) { page = 1; }
-      loadPage(page);
+      var isDefault = isNaN(page);
+      if (isDefault) { page = 1; }
+      loadPage(page, isDefault);
       multi.current = page;
     });
     
@@ -35,7 +36,7 @@ $(document).ready(function() {
     return false;
   }
   
-  function loadPage(index) {
+  function loadPage(index, isDefault) {
     if (index > multi.count || index < 1) { return; }
     
     $body.removeClass('first last')
@@ -51,7 +52,9 @@ $(document).ready(function() {
       text += ' (use your arrow keys)';
     }
     $pager.text(text);
-    $.address.value(index);
+    if (!isDefault) { 
+      $.address.value(index);
+    }
     multi.current = index;
   }
 });
