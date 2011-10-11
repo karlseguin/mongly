@@ -1,0 +1,7 @@
+body{font-family:Ubuntu;}
+.points{padding:10px 0;width:1080px;;margin:0 auto;overflow:auto;border-bottom:1px solid #ddd;}
+.points:last-child{border:none;}
+.points > div{float:left;width:28%;font-size:18px;line-height:50px;padding:15px;border-right:1px solid #ddd;position:relative;}
+.points > div:last-child{border-right:none;}
+.count{font-size:15px;color:#ddd;position:absolute;left:10px;top:0;border:2px solid #ddd;border-radius:100px;padding:0 5px;line-height:20px;}
+pre{width:75%;margin:30px auto;}

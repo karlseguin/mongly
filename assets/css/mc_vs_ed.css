@@ -1,9 +1,7 @@
-body{font-family:Chivo,verdana;}
+body{font-family:Chivo;}
 h2{color:#ddd;font-weight:normal;margin-bottom:10px;}
 p{margin-bottom:35px;}
-pre{line-height:26px;margin-bottom:50px;}
-pre .comment{color:#5a5;}
-
+pre{margin-bottom:50px;}
 
 #page{width:960px;margin:100px auto;font-size:16px;}
 #main{font-size:32px;text-align:center;line-height:50px;margin-bottom:50px;}

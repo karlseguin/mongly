@@ -1,9 +1,9 @@
 <h2>Use separate collections</h2>
 <pre>
-  &gt; db.posts.find();
+  db.posts.find();
   {_id: 1, title: 'unicorns are awesome', ...}
 
-  &gt; db.comments.find();
+  db.comments.find();
   {_id: 1, post_id: 1, title: 'i agree', ...}
   {_id: 2, post_id: 1, title: 'they kill vampires too!', ...}
 </pre>
@@ -12,7 +12,7 @@
 
 <h2>Use embedded documents</h2>
 <pre>
-  &gt; db.posts.find();
+  db.posts.find();
   {_id: 1, title: 'unicorns are awesome', ..., comments: [
     {title: 'i agree', ...},
     {title: 'they kill vampires too!', ...}

@@ -3,13 +3,13 @@
 <pre>
   // you can select a range (useful for paging)
   // but can't sort, so you are limited to the insertion order
-  > db.posts.find({_id: 3}, {comments: {$slice: [0, 5]}})
+  db.posts.find({_id: 3}, {comments: {$slice: [0, 5]}})
   
   // you can select the post without any comments also
-  > db.posts.find({_id: 54}, {comments: -1})
+  db.posts.find({_id: 54}, {comments: -1})
 
   // you <em>can't</em> use the update's position operator ($) for field selections
-  > db.posts.find({'comments.user': 'leto'}, {title: 1, 'comments.$': 1})
+  db.posts.find({'comments.user': 'leto'}, {title: 1, 'comments.$': 1})
 </pre>
 
 <div class="note">(there are two separate features, currently in planning/development, which should address this)</div>

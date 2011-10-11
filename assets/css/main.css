@@ -2,6 +2,8 @@
 ul{list-style:none;}
 body{font-family:verdana;}
 a{text-decoration:none;color:#c35617;}
+pre{line-height:26px}
+pre .comment{color:#282;}
 
 #homeLink {position:absolute;top:0;left:50px;border:1px solid #ddd;border-top:none;padding:5px 12px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;color:#666;}
 #homeLink:hover{background:#ddd;}
@@ -10,7 +12,7 @@ a{text-decoration:none;color:#c35617;}
 #page a:hover{text-decoration:underline;}
 #multi{display:none;}
 #leaf{position:fixed;bottom:0;width:23px;height:50px;right:75px;cursor:pointer}
-#footer{height:35px;width:100%;position:absolute;bottom:0;display:none;text-align:right;}
+#footer{height:35px;width:100%;position:absolute;bottom:0;display:none;text-align:right;font-size:80%;}
 #footer a{color:#222;padding:2px 0;margin-right:40px;}
 #footer a:hover{text-decoration:underline;}
 
@@ -30,3 +32,4 @@ body.dark{background:#222;color:#fff;}
 body.dark #footer a{color:#fff;}
 body.dark #homeLink {border-color:#333;border-top:none;color:#888;}
 body.dark #homeLink:hover{background:#444;}
+body.dark pre .comment{color:#5a5;}
