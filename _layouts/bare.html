@@ -11,7 +11,7 @@
     <script src="/assets/js/main.js" type="text/javascript"></script>
     {% if page.multi %}<script src="/assets/js/multi.js" type="text/javascript"></script>{% endif %}
   </head>
-  <body>
+  <body{% if page.theme %} class="{{ page.theme }}"{% endif %}>
     {% if page.url != '/index.html' %}<a href="/" id="homeLink">home</a>{% endif %}
     <div id="page">{{ content }}</div>
     <img src="/assets/i/leaf.png" id="leaf" />

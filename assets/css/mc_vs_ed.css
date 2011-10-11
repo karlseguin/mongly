@@ -1,4 +1,4 @@
-body{font-family:Chivo,verdana;background:#222;color:#fff;}
+body{font-family:Chivo,verdana;}
 h2{color:#ddd;font-weight:normal;margin-bottom:10px;}
 p{margin-bottom:35px;}
 pre{line-height:26px;margin-bottom:50px;}
@@ -12,5 +12,3 @@ body.first #main:first-letter, body.last #main:first-letter{font-size:75px;}
 
 #or{font-size:50px;text-align:center;margin-bottom:50px;color:#ccc;text-shadow:0 0 3px #000;}
 .note{font-size:20px;color:#ccc;text-align:right;margin-top:10px;font-style:italic;}
-
-#footer a{color:#fff;}
