@@ -1,7 +1,6 @@
 body{font-family:Ubuntu;}
 h1{position:absolute;left:3px;top:100px;width:150px;text-align:center;}
 .points{padding:10px 0;width:1080px;margin:0 auto;overflow:auto;}
-.points > div{float:left;width:28%;font-size:18px;line-height:50px;padding:15px;border-right:1px solid #ddd;position:relative;}
-.points > div:last-child{border-right:none;}
+.points > div{float:left;width:28%;font-size:18px;line-height:50px;padding:15px;position:relative;}
 .count{font-size:15px;color:#ddd;position:absolute;left:10px;top:0;border:2px solid #ddd;border-radius:100px;padding:0 5px;line-height:20px;}
 pre{width:1080px;margin:30px auto;}
