@@ -24,6 +24,8 @@ $(document).ready(function() {
     if (code == 37) {
       return previousPage();
     }
+  }).delegate('[data-page]', 'click', function(){
+    loadPage(parseInt($(this).attr('data-page')));
   });
   
   function nextPage() {
@@ -47,10 +49,6 @@ $(document).ready(function() {
     
     $container.empty().append($pages.eq(index-1));
     var text = index + ' of ' + multi.count;
-    if (!multi.loaded) { 
-      multi.loaded = true;
-      text += ' (use your arrow keys)';
-    }
     $pager.text(text);
     if (!isDefault) { 
       $.address.value(index);

@@ -1,11 +1,11 @@
 ---
 layout: bare
-title: What's A Padding Factor
+title: "What's A Padding Factor?"
 css: padding_factor
 multi: false
 fonts: [Ubuntu]
 ---
-<h1>What's A Padding Factor?</h1>
+<h1>{{ page.title }}</h1>
 <div class="points">
   <div>An update that doesn't change a document's underlying size can be done in-place, without moving the document.<span class="count">1</span></div>
   <div>An update which does change a document's size forces MongoDB to move the document and update indexes, which is slower.<span class="count">2</span></div>
@@ -36,5 +36,6 @@ fonts: [Ubuntu]
   db.unicorns.compact()
   db.unicorns.stats().paddingFactor
   1
-
 </pre>
+
+<div id="pager">page 1 of 1</div>
