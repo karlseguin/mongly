@@ -7,6 +7,7 @@ $(document).ready(function() {
   var $prev = $('<a>').attr({id: 'prev', href: '#'}).click(previousPage).append('<span>').appendTo($body);
   multi = {current: null, count: $pages.length};
   
+  
   $.address.strict(false);
   $.address.externalChange(function(e) {
       var page = parseInt(e.value);

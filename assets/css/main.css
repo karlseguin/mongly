@@ -5,7 +5,7 @@ a{text-decoration:none;color:#c35617;}
 pre{line-height:26px}
 pre .comment{color:#282;}
 
-#homeLink {z-index:2;position:absolute;top:0;left:0;background:#eee;width:49px;padding:5px 1px;color:#666;text-align:center;font-size:90%;border-bottom-right-radius:4px;}
+#homeLink {z-index:2;position:fixed;top:0;left:0;background:#eee;width:49px;padding:5px 1px;color:#666;text-align:center;font-size:90%;border-bottom-right-radius:4px;}
 #homeLink:hover{background:#ddd;}
 #home {width:700px;margin:50px auto;}
 #home li{padding:6px;}
@@ -16,7 +16,7 @@ pre .comment{color:#282;}
 #footer a{color:#222;padding:2px 0;margin-right:40px;}
 #footer a:hover{text-decoration:underline;}
 
-#next, #prev{position:absolute;top:0;right:0;height:100%;width:50px;font-size:50px;color:#999;}
+#next, #prev{position:fixed;top:0;right:0;height:100%;width:50px;font-size:50px;color:#999;}
 #prev{left:0;}
 #next:hover, #prev:hover {color:#111;}
 #next:hover{border-left:1px solid #bbb;}
@@ -24,7 +24,7 @@ pre .comment{color:#282;}
 #next span, #prev span{position:absolute;top:45%;width:100%;text-align:center;}
 #next span:after{content:'\203a'}
 #prev span:after{content:'\2039'}
-#pager{position:fixed;bottom:25px;left:25px;color:#888;font-size:80%;}
+#pager{position:fixed;bottom:5px;left:55px;color:#888;font-size:80%;}
 
 
 /* dark theme */
