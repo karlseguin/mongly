@@ -12,7 +12,7 @@ pre .comment{color:#282;}
 #page a:hover{text-decoration:underline;}
 #multi{display:none;}
 #leaf{position:fixed;bottom:0;width:23px;height:50px;right:75px;cursor:pointer}
-#footer{height:35px;width:100%;position:absolute;bottom:0;display:none;text-align:right;font-size:80%;}
+#footer{padding:4px 0;width:100%;position:fixed;bottom:0;display:none;text-align:right;font-size:80%;background:#fff;}
 #footer a{color:#222;padding:2px 0;margin-right:40px;}
 #footer a:hover{text-decoration:underline;}
 
@@ -29,6 +29,7 @@ pre .comment{color:#282;}
 
 /* dark theme */
 body.dark{background:#222;color:#fff;}
+body.dark #footer{background:#222;}
 body.dark #footer a{color:#fff;}
 body.dark #homeLink {background:#444;color:#999;}
 body.dark #homeLink:hover{background:#666;}
