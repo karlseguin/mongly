@@ -1,0 +1,22 @@
+body{font-family:'Varela Round',verdana;height:100%;}
+h1{width:960;margin:20px auto;text-align:center;font-size:38px;}
+h3{margin-top:20px;}
+p{margin-bottom:20px;line-height:26px;}
+p.nopad{margin-bottom:0px;}
+pre{font-size:85%;border:1px solid #ccc;border-radius:4px;padding:10px;color:#333;margin-bottom:10px;}
+#page{width:960px;margin:0 auto;}
+#intro{font-size:18px;line-height:26px;}
+
+#tldr {width:100%;margin:40px 0;padding:15px 0;border:solid #aaa;border-width:1px 0;}
+#tldr .caption{float:left;width:150px;line-height:55px;}
+#tldr .text{margin-left:160px;line-height:28px;}
+#tldr .caption:after{content:'\203a';padding-left:50px;}
+
+#feature{overflow:auto;}
+#explanation{width:500px;float:left;}
+#example{width:400px;margin-left:550px;}
+#example table{width:400px;}
+#example table th{text-align:left;}
+
+.preNote div{text-align:center;background:#ddd;color:#222;padding:5px 0;border-top-left-radius:5px;border-top-right-radius:5px;border:1px solid #bbb;text-shadow:1px 1px 1px #fff;font-size:95%;}
+.preNote pre {border-top:none;border-top-left-radius:0;border-top-right-radius:0;}
