@@ -1,0 +1,15 @@
+html,body,#page{height:100%;}
+h2{color:#444;margin:10px 0;}
+p{color:#666;margin:2px;width:450px}
+
+#page{font-family:'Varela Round',verdana;;}
+#posts, #tools{height:100%;float:left;padding:0 10px;}
+#posts{width:50%;background:#e6e6e6;border-right:1px solid #999;}
+#posts ul a, #tools li a{display:block;padding:8px;border:1px solid transparent;border-radius:4px;}
+#posts ul a:hover{background:#f3f3f3;text-decoration:none;border:1px solid #bbb;}
+#posts p{margin:10px;}
+
+#tools {padding-left:20px;}
+#tools ul a:hover{background:#f3f3f3;text-decoration:none;border:1px solid #bbb;}
+
+#footer{background:transparent;}

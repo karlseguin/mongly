@@ -1,10 +1,69 @@
 ---
 layout: bare
-title: The  MongoDB Collections
+title: The MongoDB Collection
+css: index
+fonts: [Varela Round]
 ---
 
-<ul id="home">
-  {% for post in site.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div id="posts">
+  <h2>The MongoDB Collection</h2>
+  <p>A collection of essays on some fundamental aspects of using and mastering MongoDB.</p>
+  <ul>
+    <li><a href="/multiple-collections-versus-embedded-documents">Multiple Collections vs Embedded Documents</a></li>
+    <li><a href="/Speedig-Up-Queries-Understanding-Query-Plans">Speeding Up Queries: Understanding Query Plans</a></li>
+    <li><a href="/whats-a-padding-factor">What's A Padding Factor?</a></li>
+  </ul>
+</div>
+<div id="tools">
+  <h2>Getting Started? Try...</h2>
+  <ul>
+    <li>
+      <a href="http://openmymind.net/mongodb.pdf">
+        The Little MongoDB Book
+        <p>The ultimate introduction to MongoDB can be found in this concise and easy to read free ebook</p>
+      </a>
+    </li>
+    <li><a href="http://tutorial.mongly.com/tutorial/index">
+      The MongoDB Interactive Tutorial
+      <p>Connect to an actual MongoDB database in this 15 minute entertaining bootcamp</p>
+    </a></li>
+    <li>
+      <a href="http://tutorial.mongly.com/geo/index">
+        Geospatial Interactive Tutorial
+        <p>A 5 minute guide to understanding MongoDB's geospatial capabilities</p>
+      </a></li>
+  </ul>
+  <h2>Side Projects</h2>
+  <ul>
+    <li>
+      <a href="http://spy.mongly.com/">
+        MongoSpy
+        <p>Developer apps with theMongoDB profiler showing in your browser's console</p>
+      </a>
+    </li>
+    <li>
+      <a href="http://watch.mongly.com/">
+        MongoWatch
+        <p>Monitor high level statistics from multiple MongoDB instances</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/karlseguin/MongoPlus/">
+        MongoPlus
+        <p>Extensions to the Mongo shell</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/karlseguin/MongoLight">
+        MongoLight
+        <p>A lightweight object-document mapper for Rails</p>
+      </a>
+    </li>
+    <li>
+      <a href="http://mogade.com/">
+        Mogade
+        <p>A MongoDB-powered service for mobile game developers</p>
+      </a>
+    </li>
+  </ul>
+</div>
