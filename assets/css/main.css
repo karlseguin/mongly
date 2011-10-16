@@ -5,7 +5,7 @@ a{text-decoration:none;color:#c35617;}
 pre{line-height:26px}
 pre .comment{color:#282;}
 
-#homeLink {z-index:2;position:fixed;top:0;left:0;background:#eee;width:49px;padding:5px 1px;color:#666;text-align:center;font-size:90%;border-bottom-right-radius:4px;}
+#homeLink {z-index:2;position:fixed;top:0;left:0;background:#eee;width:50px;padding:5px 0;color:#666;text-align:center;font-size:90%;border-bottom-right-radius:4px;}
 #homeLink:hover{background:#ddd;}
 #home {width:700px;margin:50px auto;}
 #home li{padding:6px;}
