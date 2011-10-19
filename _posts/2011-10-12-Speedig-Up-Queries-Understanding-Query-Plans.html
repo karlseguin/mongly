@@ -81,7 +81,7 @@ db.products.find({qty: {$gt: 400}, cat: 'book'}).explain()
   <div class="textAndCode">
     <h3>Sorting</h3>
     <div class="text">
-      <p>Sorting can be an expensive operation, so it's important to treat the fields that you are sorting on just like a field that you are querying. There is one important difference though, the field that you are sorting must be the last field in your index. The only exception to this rule is if the field is also part of your query, them the must-be-last-rule doesn't apply.</p>
+      <p>Sorting can be an expensive operation, so it's important to treat the fields that you are sorting on just like a field that you are querying. There is one important difference though, the field that you are sorting must be the last field in your index. The only exception to this rule is if the field is also part of your query, then the must-be-last-rule doesn't apply.</p>
       <p>The query on the right sorts on a third field which isn't part of our index. The same documents are returned, but it takes more than 6 times longer. The only solution is to add <code>price</code> as the last field of our index. If however, we wanted to sort on <code>qty</code> or <code>cat</code>, our index wouldn't need to change.</p>
       
       <p>What would happen if we kept our existing index and added a separate index to <code>price</code>? If you think it'll solve the issue, head back to the top and start reading again. A MongoDB query can only use one query. The correct answer is...You can't know unless you run <code>explain</code>. It's a pretty safe bet that MongoDB will use an index, but whether it uses the original index or the new index is up to its query plan (which is based on which one actually runs faster).
@@ -103,7 +103,7 @@ db.products.find({qty: {$gt: 400}, cat: 'book'}).sort({price:1}).explain()
   </div>
   
   <h3>Being Smart About Indexes</h3>
-  <p>Indexes are free. They take memory, and impose a performance penalty when doing inserts, updates and deletes. Normally the performance hit is negligible (especially compared to gains in read performance), but that doesn't mean that we can't be smart about creating our indexes.</p>
+  <p>Indexes aren't free. They take memory, and impose a performance penalty when doing inserts, updates and deletes. Normally the performance hit is negligible (especially compared to gains in read performance), but that doesn't mean that we can't be smart about creating our indexes.</p>
   
   <p>When we first looked at the importance of field order, we created a single index and looked at two queries. The first query, on <code>qty</code>, couldn't make use of the index due to field ordering. If we just reverse our indexes fields, from <code>{cat: 1, qty: 1}</code> to <code>{qty: 1, cat: 1}</code>, both queries will be able to use the index.</p>
   
