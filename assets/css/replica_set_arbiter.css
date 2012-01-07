@@ -1,0 +1,8 @@
+body{font-family:Podkova,verdana;background:#E1E0DA;}
+#page{width:960px;margin:20px auto;}
+h1{margin-bottom:10px}
+h2{margin:25px 0 10px}
+p{line-height:26px;margin-bottom:20px;font-size:18px;}
+
+#tldr{padding:20px;margin:10px 0;border:solid #999;border-width:3px 0;position:relative;}
+#tldr span{font-size:38px;position:absolute;bottom:15px;right:15px;color:#aaa;}
