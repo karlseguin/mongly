@@ -10,7 +10,7 @@ css: write_durability
 <p>Much has been said about MongoDB's write durability. Some of it true, some of it not, and some of it was once true but no longer is. This can lead to confusion about a topic where no confusion should exist.</p>
 
 <h2>History</h2>
-<p>There was a time when an insert or update happened in memory with no options available to developers. The data files would get synched periodically (configurable, but defaulting to 60 second). This meant that, should the server crash, up to 60 seconds of writes would be lost. At the time, the answer to this was to run replica pairs (which were later replaced with replica sets). As the number of machines in your replica set grows, the chances of data loss decreases.</p>
+<p>There was a time when an insert or update happened in memory with no options available to developers. The data files would get synced periodically (configurable, but defaulting to 60 second). This meant that, should the server crash, up to 60 seconds of writes would be lost. At the time, the answer to this was to run replica pairs (which were later replaced with replica sets). As the number of machines in your replica set grows, the chances of data loss decreases.</p>
 
 <p>But replication is asynchronous, meaning the master could crash before replicating your data. Under this circumstance, the loss-of-data window was much smaller than 60 seconds, but it was still a concern. It therefore became possible, by calling <code>getLastError</code> with <code>{w:N}</code> after a write, to specify the number (N) of servers the write must be replicated to before returning.</p>
 
@@ -19,7 +19,7 @@ css: write_durability
 <p>Then 1.8 added journaling and 2.0 enabled it by default. This largely addressed any concern about MongoDB write durability, especially for single-server setups.</p>
 
 <h2>Current State</h2>
-<p>Although journaling is now enabled by default, it's important to know that it does group commits. That means, writes are still done in memory. The difference though is that the journal file is synched every 100ms (configurable down to 2ms), while the data files continue to sync every 60 seconds. So, there's still a window of possible data loss, though it's much smaller. If you are wondering why it's ok to sync one often (100ms) and the other not (60s), it's because journaling uses an append-only file, which is much faster to write to.</p>
+<p>Although journaling is now enabled by default, it's important to know that it does group commits. That means, writes are still done in memory. The difference though is that the journal file is synced every 100ms (configurable down to 2ms), while the data files continue to sync every 60 seconds. So, there's still a window of possible data loss, though it's much smaller. If you are wondering why it's ok to sync one often (100ms) and the other not (60s), it's because journaling uses an append-only file, which is much faster to write to.</p>
 
 <p>There are two things developers can do to eliminate the remaining gap, both using <code>getLastError</code>. You can use either one, or both. First, the <code>{w:N}</code> option remains available. Secondly, you can specify <code>{j: true}</code>, which won't return until the journal data is committed to disk. (to specify both, you use <code>{j: true, w:N}</code>)</p>
 
