@@ -23,7 +23,7 @@ css: replica_set_arbiter
 
 <p>You see, when you think of servers crashing, it's reasonable to expect any remaining server to be elected - even without a majority. Instead of servers going down, consider what would happen if the servers all remain operational but can't see each other. Let's look at an example</p>
 
-<p>Pretend we have 4 servers - representing a [evil] even number of votes: A, B, C and D. AB are in one data center (or availability zone) while CD are in another. Now, the link between the two datacenter dies. What would happen? Each group thinks the other is down and could both elect their own primary. This would cause data conflicts (two servers would be accepting writes).</p>
+<p>Pretend we have 4 servers - representing a [evil] even number of votes: A, B, C and D. AB are in one data center (or availability zone) while CD are in another. Now, the link between the two data-centers dies. What would happen? Each group thinks the other is down and could both elect their own primary. This would cause data conflicts (two servers would be accepting writes).</p>
 
 <p>So let's introduce an arbiter (E) and with it, an uneven number of votes. Now each servers knows that the set is made up of 5 votes, and thus 3 votes are required to elect a new primary. Whatever group E ends up with (either ABE or CDE) a primary will be elected, and, more importantly, whatever group E doesn't end up with won't be able to elect a primary.</p>
 

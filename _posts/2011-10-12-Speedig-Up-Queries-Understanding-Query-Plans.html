@@ -62,7 +62,7 @@ db.products.find({cat: 'book'}).explain()
     <div class="text">
       <p>The order of the fields used to create your index is critical. The good news is that, if you get the order wrong, the index won't be used at all, so it'll be easy to spot with <code>explain</code>.</p>
       <p>The queries on the right are two different queries. What's important though is that the first query cannot use the index because <code>cat</code> is defined first in our index. You should think of compound indexes as having the field values concatenated together. So, an "index value" of "book405" (cat + qty) can only be used to find something by cat <strong>or</strong> cat and qty.</p>
-      <p>The two queries return around the same number of documents, but the second, index-powered query, has to scan a significant smaller number of objects. This is due to the logrithmic nature of B-trees, which Mongo indexes use.</p>
+      <p>The two queries return around the same number of documents, but the second, index-powered query, has to scan a significant smaller number of objects. This is due to the logarithmic nature of B-trees, which Mongo indexes use.</p>
     </div>
     <pre>db.products.createIndex({cat: 1, qty: 1})
 db.products.find({qty: {$gt: 400}}).explain()

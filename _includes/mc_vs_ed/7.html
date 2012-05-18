@@ -1,7 +1,7 @@
 <div id="main">Separate collections require more work</div>
 
 <pre>
-  // finding a post + its comments is two queries and require extra work
+  // finding a post + its comments is two queries and requires extra work
   // in your code to make it all pretty (or your ODM might do it for you)
   db.posts.find({_id: 9001});
   db.comments.find({post_id: 9001})
