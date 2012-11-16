@@ -7,8 +7,8 @@
   // pull out one or more specific comment(s)
   db.comments.find({post_id: 3, user: 'leto'})
   
-  // get a all of a user's comments joining the posts to get the title
-  var comments = db.comments.find({user: 'leto'}, {post_id: true, votes: true})
+  // get all of a user's comments joining the posts to get the title
+  var comments = db.comments.find({user: 'leto'}, {post_id: true})
   var postIds = comments.map(function(c) { return c.post_id; });
   db.posts.find({_id: {$in: postIds}}, {title: true});
 </pre>
